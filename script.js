@@ -27,14 +27,12 @@ GoodBye $wave
 
             chat_lines = chat_data.split("\n")
             $(".chat").append(" <ul> </ul>");
-            $(".chat ul:last-child").append("<li>       mastercoder8: Hello World!.. </li>")
-            setTimeout(logr,1000)
-            function logr(){console.log("timingout"); $(".chat ul:last-child").append("<li>       Bot: Hello you too!.. </li>")}
-            function waitr(){console.log("...");}
+            $(".chat ul:last-child").append("<li> mastercoder8: Hello World!.. </li>")
             users = ["jc", "mastercoder8"];
+            user_imagemap = {"jc": "./resources/images/robot.png", "mastercoder8": "./resources/images/boy.png"}
             var i =0;
             var intr = setInterval(data,2000);
-            console.log("Done")
+            console.log("Preloading images")
             getYesOrNoImage("yes")
             getYesOrNoImage("no")
             function emojifi(text_data){
@@ -60,7 +58,14 @@ GoodBye $wave
                 if(i==chat_lines.length-1) clearInterval(intr);
             }
             function chat(username, str, elem){
-                $(elem).append("<li>" + username  + " : "+ str + "</li>")
+                var time = new Date();
+                
+                var timestamp = ("0" + time.getHours()).slice(-2)   + ":" + 
+                    ("0" + time.getMinutes()).slice(-2) + ":" + 
+                    ("0" + time.getSeconds()).slice(-2);
+                user_with_image = '<a class="user" href="#"><img alt="'+ username + '" src="' + user_imagemap[username]  + '" /></a>'
+                message = '<div class="date">' + timestamp + '</div> <div class="message">' + str + '</div>';
+                $(elem).prepend("<li class='" + username + "'>" +  user_with_image + message + "</li>")
             }
             
             function getYesOrNoImage(yesorno){
@@ -70,7 +75,7 @@ GoodBye $wave
                     return response.json();
                   }).then(function(data) {
                     console.log("Getting image:"  + data["image"])
-                    $("#output").attr(yesorno,"<br><img class='img_yesno' src='" + data["image"] + "'/>")
+                    $("#output").attr(yesorno,"<br><img class='yesno' src='" + data["image"] + "'/>")
                   }).catch(function() {
                     console.log("Booo");
                   });

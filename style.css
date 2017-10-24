@@ -1,0 +1,133 @@
+body {
+    background-color: #f3f3f3;
+    /* background-image: url("./resources/images/hello_world.gif"); */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+section {
+    width: 1000px;
+    margin: 60px auto;
+    background-color: #fff;
+    padding: 10px 15px 20px 15px;
+}
+
+.chat ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chat ul li {
+    margin: 45px 0 0 0;
+    font-weight: 300;
+}
+
+.chat ul li .date {
+    font-size: 14px;
+    color: #a6a6a6;
+}
+
+.chat ul li a.user {
+    margin: -30px 0 0 0;
+    display: block;
+    color: #333;
+}
+
+.chat ul li a.user img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat ul li.other a.user {
+    float: right;
+}
+
+.chat ul li .message {
+    display: block;
+    padding: 10px;
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    background-color: #2ECC71;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat ul li .message:before {
+    content: '';
+    position: absolute;
+    border-top: 16px solid rgba(0, 0, 0, 0.15);
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+}
+
+.chat ul li .message:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-top: 17px solid #2ECC71;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+}
+
+.chat ul li.jc a.user {
+    float: right;
+}
+
+.chat ul li.jc .date {
+    float: right;
+    margin: -20px 10px 0 0;
+}
+
+.chat ul li.jc .message {
+    margin: 0 90px 0 0;
+}
+
+.chat ul li.jc .message:before {
+    margin: -9px -16px 0 0;
+    right: 0;
+}
+
+.chat ul li.jc .message:after {
+    content: '';
+    right: 0;
+    margin: 0 -15px 0 0;
+}
+
+.chat ul li.mastercoder8 a.user {
+    float: left;
+}
+
+.chat ul li.mastercoder8 .date {
+    float: left;
+    margin: -20px 0 0 10px;
+}
+
+.chat ul li.mastercoder8 .message {
+    margin: 0 0 0 90px;
+}
+
+.chat ul li.mastercoder8 .message:before {
+    margin: -9px 0 0 -16px;
+    left: 0;
+}
+
+.chat ul li.mastercoder8 .message:after {
+    content: '';
+    left: 0;
+    margin: 0 0 0 -15px;
+}
+
+img.yesno {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 3px;    
+}
+
+output {
+    display: none
+}
