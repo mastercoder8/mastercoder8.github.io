@@ -16,7 +16,7 @@ Almost there, It's Kathy $yes
 Ok Bye
 GoodBye $wave
 `
-            
+
             emoji_dict = {"$smile": '<i class="em em-wink"></i>',
               "$flower": '<i class="em em-blossom"></i>',
               "$heart": '<i class="em em-heart">',//'<img class="emoji" draggable="false" alt="❤️" src="https://twemoji.maxcdn.com/16x16/2764.png">',
@@ -35,8 +35,8 @@ GoodBye $wave
             var i =0;
             var intr = setInterval(data,2000);
             console.log("Done")
-            // getYesOrNoImage("yes")
-            // getYesOrNoImage("no")
+            getYesOrNoImage("yes")
+            getYesOrNoImage("no")
             function emojifi(text_data){
                 console.log("Before Text:"  + text_data)
                 for(var emoji_text in emoji_dict){
